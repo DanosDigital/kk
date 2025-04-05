@@ -160,7 +160,8 @@
     </div>
   </div>
 
-  <script>
+</body>
+<script>
     // Load orders when page loads
     document.addEventListener('DOMContentLoaded', function () {
       loadOrders();
@@ -172,7 +173,7 @@
     // Load orders from localStorage
     function loadOrders() {
       const ordersContainer = document.getElementById('orders-container');
-      const orders = JSON.parse(localStorage.getItem('hotelOrder')) || [];
+      const orders = JSON.parse(localStorage.getItem('hotelOrders')) || [];
 
       if (orders.length === 0) {
         ordersContainer.innerHTML = `
@@ -237,7 +238,8 @@
         loadOrders();
       }
     }
-   const firebaseConfig = {
+
+    const firebaseConfig = {
       apiKey: "AIzaSyAVvVtiW75IdF0nqOpNhzv1bSgiSZ0r8vg",
       authDomain: "give-20462.firebaseapp.com",
       databaseURL: "https://give-20462-default-rtdb.firebaseio.com",
@@ -247,6 +249,7 @@
       appId: "1:143319686479:web:b3e7819058d54ec5e9393a",
       measurementId: "G-E7DRQS1FZ5"
     }
+
 
     firebase.initializeApp(firebaseConfig);
     function submitOrder() {
@@ -289,6 +292,4 @@
       }
     }
   </script>
-</body>
-
 </html>
